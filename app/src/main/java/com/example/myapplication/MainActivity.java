@@ -65,17 +65,19 @@ public class MainActivity extends AppCompatActivity {
                       ayat= String.valueOf(q.QuranArabicText[ayatNumber]);
                       Intent intent=new Intent(MainActivity.this,AyatShowingActivity2.class);
                       intent.putExtra("ayat",ayat);
+                      String surahName=q.urduSurahNames[surahIndex];
+                      intent.putExtra("surah",surahName);
 
                       startActivity(intent);
                   }
                   else
                   {
-                      Toast.makeText(MainActivity.this, "please select correct surah", Toast.LENGTH_SHORT).show();
+                      Toast.makeText(MainActivity.this, "Please enter correct ayat Number", Toast.LENGTH_SHORT).show();
                   }
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this, "Please enter correct ayat Number", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "please select correct surah", Toast.LENGTH_SHORT).show();
                 }
 
             }

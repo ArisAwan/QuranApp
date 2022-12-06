@@ -9,6 +9,7 @@
 
 
 
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
@@ -23,6 +24,18 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="185dp"
+
+        android:layout_marginBottom="546dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
     <TextView
         android:id="@+id/surahNumberTextBox"
         android:layout_width="wrap_content"
@@ -30,9 +43,11 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:text="Surah Number"
+        android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/ayatNo"
         app:layout_constraintEnd_toEndOf="@+id/ayatNo"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="@+id/EnterAyatTextBox"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.483" />
@@ -41,10 +56,12 @@
         android:id="@+id/EnterAyatTextBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="EnterAyatNumber"
+        android:text="EnterAyatNumber: "
+        android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/ayatNo"
         app:layout_constraintEnd_toStartOf="@+id/ayatNo"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ayatNo"
         app:layout_constraintVertical_bias="0.35" />
@@ -56,6 +73,8 @@
         android:layout_marginTop="140dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
+
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/listToView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,23 +87,25 @@
         android:id="@+id/listToView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/image_quran"
+        android:fontFamily="@font/noorehuda_regular"
+        android:textColor="@color/white"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ayatNo"
-        app:layout_constraintVertical_bias="0.0"
-        android:background="@drawable/image_quran"
-        android:fontFamily="@font/noorehuda_regular"
 
-        android:textColor="@color/white"
-        android:textSize="40dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/ayatNo"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search"
+        android:textColor="@color/white"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toTopOf="@+id/ayatNo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
